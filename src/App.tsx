@@ -2,7 +2,6 @@ import "./App.css";
 import { MarketOverview } from "react-ts-tradingview-widgets";
 import { Button } from "./components/ui/button";
 import TradingViewWidget from "./components/TradingViewWidget";
-import { useEffect } from "react";
 
 function App() {
   // useEffect(() => {
