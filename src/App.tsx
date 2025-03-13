@@ -2,16 +2,17 @@ import "./App.css";
 import { MarketOverview } from "react-ts-tradingview-widgets";
 import { Button } from "./components/ui/button";
 import TradingViewWidget from "./components/TradingViewWidget";
+import { useEffect } from "react";
 
 function App() {
-  // useEffect(() => {
-  //   const token  = localStorage.getItem('token02')
-  //   if(!token) {
-  //     window.location.href = 'http://localhost:3001/ar'
-  //   }
-  // },[])
+  useEffect(() => {
+    const token  = localStorage.getItem('token-001')
+    if(!token) {
+      window.location.href = import.meta.env.VITE_LANDING_URL
+    }
+  },[])
   return (
-    <div className="flex bg-black ">
+    <div className="flex flex-col md:flex-row bg-black ">
       <TradingViewWidget />
 
       <div>
@@ -23,7 +24,7 @@ function App() {
             SELL
           </Button>
         </div>
-        <div className="h-[430px] overflow-hidden">
+        <div className="md:h-[430px] md:overflow-hidden hidden md:block">
           <MarketOverview
             colorTheme="dark"
             height={430}
