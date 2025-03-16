@@ -7,9 +7,9 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     const token  = localStorage.getItem('token-001')
-    if(!token) {
-      window.location.href = import.meta.env.VITE_LANDING_URL
-    }
+    // if(!token) {
+    //   window.location.href = import.meta.env.VITE_LANDING_URL
+    // }
   },[])
   return (
     <div className="flex flex-col md:flex-row bg-black ">
