@@ -3,6 +3,7 @@ import TickerWidget from "./TickerWidget";
 import logo from "../assets/Al-Ansari-Exchange-Logo.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { getTokenFromCookies } from "@/App";
 
 interface profile {
   _id: number;
@@ -13,7 +14,7 @@ interface profile {
 export default function Header() {
   const [profile, setProfil] = useState<profile>();
 
-  const token = localStorage.getItem("token-001");
+    const token = getTokenFromCookies();
   console.log("token", token);
   useEffect(() => {
     const fetchProfile = async () => {
